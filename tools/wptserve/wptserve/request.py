@@ -360,7 +360,7 @@ def maybedecode(s):
         return s
 
     if isinstance(s, binary_type):
-        return s.decode("ascii")
+        return s.decode("ISO-8859-1", "replace")
 
     raise TypeError("Unexpected value in RequestHeaders: %r" % s)
 
